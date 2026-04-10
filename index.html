@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가격 페이지</title>
+</head>
+<body style="text-align:center; font-family:sans-serif;">
+
+<h1 id="name">상품</h1>
+<h2 id="price">로딩중...</h2>
+
+<script>
+const url = new URLSearchParams(window.location.search);
+const price = url.get("price");
+
+if(price){
+  document.getElementById("price").innerText = price + "원";
+}else{
+  document.getElementById("price").innerText = "가격 없음";
+}
+</script>
+
+</body>
+</html>
