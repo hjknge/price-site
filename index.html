@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>가격 페이지</title>
+<title>토스뱅크 1908-3461-5939ㄱㄷㄹ</title>
 </head>
-<body style="text-align:center; font-family:sans-serif;">
+<body>
 
-<h1 id="name">상품</h1>
-<h2 id="price">로딩중...</h2>
+<h1 id="number">0</h1>
+<button onclick="increase()">+1</button>
 
 <script>
-const url = new URLSearchParams(window.location.search);
-const price = url.get("price");
+let num = 0;
 
-if(price){
-  document.getElementById("price").innerText = price + "원";
-}else{
-  document.getElementById("price").innerText = "가격 없음";
+function increase() {
+  num++;
+  document.getElementById("number").innerText = num;
 }
 </script>
 
